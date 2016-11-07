@@ -1,0 +1,28 @@
+{
+	"name": "SimpleSort",
+	"version": "1.0.0",
+	"author": [
+		"Clark Verbrugge"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SimpleSort",
+	"descriptionmsg": "simplesort-desc",
+	"license-name": "CC0-1.0",
+	"type": "parserhook",
+	"AutoloadClasses": {
+		"SimpleSortHooks": "SimpleSort.hooks.php"
+	},
+	"ExtensionMessagesFiles": {
+		"SimpleSortMagic": "SimpleSort.i18n.magic.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"SimpleSortHooks::onParserFirstCallInit"
+		]
+	},
+	"MessagesDirs": {
+		"SimpleSort": [
+			"i18n"
+		]
+	},
+	"manifest_version": 1
+}

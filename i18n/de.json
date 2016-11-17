@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Metalhead64"
+		]
+	},
+	"simplesort-desc": "Einfache Sortierung einer Folge von Objekten, basierend auf einem angegebenen Trennzeichen.",
+	"simplesort-err": "Nicht erkannte SimpleSort-Option: „$1“"
+}

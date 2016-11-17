@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": ["Clark Verbrugge"]
+		"authors": [
+			"Clark Verbrugge"
+		]
 	},
 	"simplesort-desc": "{{desc|name=SimpleSort|url=https://www.mediawiki.org/wiki/Extension:SimpleSort}}",
 	"simplesort-err": "Error message for unrecognized sorting options"

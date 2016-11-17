@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Xuacu"
+		]
+	},
+	"simplesort-desc": "Ordenamientu simple d'una cadena d'elementos basáu nun llendador dau.",
+	"simplesort-err": "Opción de SimpleSort nun reconocida: \"$1\""
+}

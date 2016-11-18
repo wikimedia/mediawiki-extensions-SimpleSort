@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Beta16"
+		]
+	},
+	"simplesort-err": "Opzione non riconosciuta per SimpleSort: \"$1\""
+}

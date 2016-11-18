@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226"
+		]
+	},
+	"simplesort-desc": "基于指定分隔符的简易项目字符串排序。",
+	"simplesort-err": "无法识别的SimpleSort选项：“$1”"
+}

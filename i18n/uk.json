@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"simplesort-desc": "Просте сортування для рядка елементів на основі заданого роздільника.",
+	"simplesort-err": "Нерозпізнана опція для SimpleSort: «$1»"
+}

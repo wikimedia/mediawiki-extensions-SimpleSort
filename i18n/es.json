@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"simplesort-desc": "Ordenamiento sencillo de una cadena de elementos basado en un delimitador concreto.",
+	"simplesort-err": "SimpleSort no reconoce la opción «$1»"
+}

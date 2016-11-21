@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fitoschido"
+		]
+	},
+	"simplesort-desc": "Classificació senzilla d’una cadena d’elements basada en un delimitador concret.",
+	"simplesort-err": "El SimpleSort no reconeix l’opció «$1»"
+}

@@ -4,5 +4,6 @@
 			"Elisardojm"
 		]
 	},
+	"simplesort-desc": "Ordenamiento sinxelo dunha cadea de elementos baseado nun delimitador concreto.",
 	"simplesort-err": "Opción non recoñecida para SimpleSort: \"$1\""
 }

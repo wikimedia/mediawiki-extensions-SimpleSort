@@ -18,16 +18,18 @@ class SimpleSortHooks {
    }
 
    // Render the output of {{#simplesort:}}.
-   // If two arguments are supplied, the 1st specifies options, whitespace-separated:
-   //	desc	   Sort in descending order
-   //	alpha	   Alphabetic sorting (regular, not natural)
-   //	num		   Numeric sorting
-   //	case	   Case-sensitive sorting
-   //	insep="x"  Use x as a list separator in order to identify individual elements in the input.
-   //			   Note that whitespace on either side of x is ignored, and discarded.
-   //			   The quotes are required.
-   //	outsep="x" Use x as a list separator in the output.
-   //			   The quotes are required.
+   // If two or more arguments are supplied, the 1st specifies options, whitespace-separated:
+   //	desc	     Sort in descending order
+   //	alpha	     Alphabetic sorting (regular, not natural)
+   //	num		     Numeric sorting
+   //	case	     C ase-sensitive sorting
+   //	insep="x"    Use x as a list separator in order to identify individual elements in the input.
+   //			     Note that whitespace on either side of x is ignored, and discarded.
+   //			     The quotes are required.
+   //	outsep="x"   Use x as a list separator in the output.
+   //			     The quotes are required.
+   //	keyed        Sorting is applied to two lists simultaneously, returning only the second list.
+   //	stoponblank  A blank element means to truncate the list at that point.  If keyed, this applies to the first list.
    //  Default sorting options are to use php's "natural", case-insensitive sort order,
    //	and a comma-separator for both input and output.
    // The remaining argument is the sortable list.
@@ -39,6 +41,8 @@ class SimpleSortHooks {
 	   $cs = false; // Case-sensitive
 	   $insep = ",";  // Input separator.
 	   $outsep = ",";  // Output separator.
+	   $keyed = false;  // Keyed output sorting.
+	   $stoponblank = false;  // Truncate list at first blank element.
 
 	   $numargs = func_num_args();
 	   $arglist = func_get_args();
@@ -66,9 +70,9 @@ class SimpleSortHooks {
 			   $outsep = $insep;
 		   }
 
-		   // Only 3 options actually possible, but excessively, parse up to 4 to
+		   // Only 5 options actually possible, but excessively, parse up to 6 to
 		   //  catch and isolate trailing debris.
-		   $opts = preg_split( "/[\s]+/", trim( $options ), 4 );
+		   $opts = preg_split( "/[\s]+/", trim( $options ), 6 );
 
 		   // Check for each option.  Ignore blank options if they somehow got in there.
 		   for ( $i=0; $i < count( $opts ); $i++ ) {
@@ -82,6 +86,10 @@ class SimpleSortHooks {
 				   $nat = false;
 			   } else if ( $opts[$i] === "case" ) {
 				   $cs = true;
+			   } else if ( $opts[$i] === "keyed" ) {
+				   $keyed = true;
+			   } else if ( $opts[$i] === "stoponblank" ) {
+				   $stoponblank = true;
 			   } else if ( $opts[$i] !== "" ) {
 				   return wfMessage( 'simplesort-err', $opts[$i] )->text();
 			   }
@@ -94,22 +102,57 @@ class SimpleSortHooks {
 	   if ( $input === "" ) {
 		   $output = "";
 	   } else {
-		   if ( $insep === "" )
-			   $ilist = str_split( preg_replace( "/[\s]+/", "", $input ) );
-		   else
-			   $ilist = preg_split( "/[\s]*" . preg_quote( $insep ) . "[\s]*/", $input );
-
 		   $flags = ( ( $nat ) ? SORT_NATURAL : ( ( $alpha ) ? SORT_STRING : SORT_NUMERIC ) )
 			   | ( ( $cs ) ? 0 : SORT_FLAG_CASE );
 
-		   if ( $asc )
-			   sort( $ilist, $flags );
-		   else
-			   rsort( $ilist, $flags );
+		   $ilist = SimpleSortHooks::stringToArray( $input, $insep );
+
+		   if ( $stoponblank ) {
+			   $max = count( $ilist );
+			   for ( $i = 0; $i < $max; ++$i ) {
+				   if ( $ilist[$i] === "" ) {
+					   array_splice( $ilist, $i );
+					   break;
+				   }
+			   }
+		   }
+		   
+		   if ( $keyed ) {
+			   $ilist2 = SimpleSortHooks::stringToArray( $arglist[3], $insep );
+
+			   if ($asc) 
+				   asort( $ilist, $flags );
+			   else
+				   arsort( $ilist, $flags );
+
+			   $olist = array();
+			   foreach ( $ilist as $k => $v) {
+				   $olist[$k] = $ilist2[$k];
+			   }
+
+			   $ilist = $olist;
+		   } else {
+			   if ($asc) 
+				   sort( $ilist, $flags );
+			   else
+				   rsort( $ilist, $flags );
+		   }
 
 		   $output = implode( $outsep, $ilist );
 	   }
 
 	   return [ $output, 'noparse' => false ];
    }
+
+   // Split an input into an array based on the given separator string, discarding
+   //  surrounding whitespace.
+   //  Also handles the special case when the separator is an empty string.
+   static function stringToArray( $inarray, $sep ) {
+	   if ( $sep === "" )
+		   $outarray = str_split( preg_replace( "/[\s]+/", "", $inarray ) );
+	   else
+		   $outarray = preg_split( "/[\s]*" . preg_quote( $sep ) . "[\s]*/", $inarray );
+	   return $outarray;
+   }
+
 }

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mechanizatar"
+		]
+	},
+	"simplesort-desc": "Простае сартаванне радкоў элементаў на аснове вызначанага раздзяляльніка.",
+	"simplesort-err": "Невядомы параметр для SimpleSort: «$1»"
+}

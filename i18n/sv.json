@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"WikiPhoenix"
+		]
+	},
+	"simplesort-desc": "Enkel sortering för en sträng med föremål baserat på en angiven avgränsare.",
+	"simplesort-err": "Oigenkänt alternativ i SimpleSort: \"$1\""
+}

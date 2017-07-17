@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"simplesort-desc": "Ordenação simples de uma série de elementos, baseada num determinado delimitador.",
+	"simplesort-err": "Opção não reconhecida para o SimpleSort: \"$1\""
+}

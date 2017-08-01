@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"simplesort-desc": "Ordinamende semblice de 'na stringhe de vôsce partenne da 'nu delimitatore scacchiate.",
+	"simplesort-err": "Opzione scanusciute pe SimpleSort: \"$1\""
+}

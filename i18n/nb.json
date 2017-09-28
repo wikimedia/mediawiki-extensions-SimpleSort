@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"simplesort-desc": "Enkel sortering av en streng av elementer basert på en gitt avgrensning",
+	"simplesort-err": "Ukjent valg til SimpleSort: «$1»"
+}

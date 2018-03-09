@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kly"
+		]
+	},
+	"simplesort-desc": "基於所指定定義符號的項目字串簡易排序",
+	"simplesort-err": "無法識別的 SimpleSort 選項：「$1」"
+}

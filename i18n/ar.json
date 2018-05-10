@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"simplesort-desc": "فرز بسيط لسلسلة من العناصر بناءً على محدد محدد",
+	"simplesort-err": "خيار غير معروف لـSimpleSort: \"$1\""
+}

@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Aftabuzzaman"
+			"Aftabuzzaman",
+			"আফতাবুজ্জামান"
 		]
 	},
 	"simplesort-err": "SimpleSort-এ অস্বীকৃত বিকল্প: \"$1\""

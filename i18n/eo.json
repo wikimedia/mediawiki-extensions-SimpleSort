@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"simplesort-desc": "Simpla ordigo de signoĉeno da eroj laŭ donita apartigilo",
+	"simplesort-err": "Nekonata opcio de SimpleSort: \"$1\""
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Railfail536"
+		]
+	},
+	"simplesort-desc": "Proste sortowanie ciągu obiektów w tekście oparte o podany ogranicznik",
+	"simplesort-err": "Nierozpoznana opcja SimpleSort: „$1”"
+}

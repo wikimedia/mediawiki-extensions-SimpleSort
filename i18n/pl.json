@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Railfail536"
+			"Railfail536",
+			"Rail"
 		]
 	},
 	"simplesort-desc": "Proste sortowanie ciągu obiektów w tekście oparte o podany ogranicznik",

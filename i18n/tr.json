@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"BaRaN6161 TURK"
+		]
+	},
+	"simplesort-desc": "Belirli bir sınırlayıcıya göre öğe dizesinin basit şekilde sıralanması",
+	"simplesort-err": "SimpleSort için tanınmayan seçenek: \"$1\""
+}

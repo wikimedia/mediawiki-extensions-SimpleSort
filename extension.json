@@ -9,7 +9,7 @@
 	"license-name": "CC0-1.0",
 	"type": "parserhook",
 	"AutoloadClasses": {
-		"SimpleSortHooks": "SimpleSort.hooks.php"
+		"SimpleSortHooks": "src/SimpleSortHooks.php"
 	},
 	"ExtensionMessagesFiles": {
 		"SimpleSortMagic": "SimpleSort.i18n.magic.php"

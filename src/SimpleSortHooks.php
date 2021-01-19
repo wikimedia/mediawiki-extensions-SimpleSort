@@ -40,6 +40,7 @@ class SimpleSortHooks {
 	 * The remaining argument is the sortable list.
 	 *
 	 * @param Parser $parser
+	 * @return array
 	 */
 	public static function renderSort( $parser ) {
 		// defaults
@@ -171,6 +172,11 @@ class SimpleSortHooks {
 	 * discarding surrounding whitespace.
 	 *
 	 * Also handles the special case when the separator is an empty string.
+	 *
+	 * @param string $inarray
+	 * @param string $sep
+	 *
+	 * @return string[]
 	 */
 	private static function stringToArray( $inarray, $sep ) {
 		if ( $sep === "" ) {

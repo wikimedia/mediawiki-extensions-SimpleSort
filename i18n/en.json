@@ -1,6 +1,8 @@
 {
 	"@metadata": {
-		"authors": ["Clark Verbrugge"]
+		"authors": [
+			"Clark Verbrugge"
+		]
 	},
 	"simplesort-desc": "Simple sorting of a string of items based on a given delimiter",
 	"simplesort-err": "Unrecognized option to SimpleSort: \"$1\""

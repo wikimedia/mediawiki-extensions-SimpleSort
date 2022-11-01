@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"simplesort-desc": "Ordinamento simple de un catena de elementos a base de un delimitator fornite",
+	"simplesort-err": "SimpleSort non recognosce le option \"$1\"."
+}

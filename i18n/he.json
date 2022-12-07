@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"simplesort-desc": "מיון פשוט של מחרוזת פריטים בהתבסס על תו מפריד נתון",
+	"simplesort-err": "אפשרות לא מזוהה ל־SimpleSort‏: \"$1\""
+}

@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Eleassar"
+		]
+	},
+	"simplesort-desc": "Preprosto razvrščanje niza predmetov na podlagi danega ločila",
+	"simplesort-err": "Neprepoznana možnost za SimpleSort: »$1«"
+}

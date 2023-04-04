@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dreamy Jazz"
+		]
+	},
+	"simplesort-err": "Unrecognised option to SimpleSort: \"$1\""
+}

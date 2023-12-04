@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"simplesort-desc": "Eenvoudig sorteren van een reeks vermeldingen op basis van een bepaald scheidingsteken",
+	"simplesort-err": "Onbekende optie voor SimpleSort: “$1”"
+}

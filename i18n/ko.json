@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tensama0415"
+		]
+	},
+	"simplesort-desc": "주어진 구분자를 기준으로 항목 목록들을 간단하게 정렬",
+	"simplesort-err": "SimpleSort에 대한 인식할 수 없는 옵션: \"$1\""
+}

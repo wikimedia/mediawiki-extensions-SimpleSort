@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wizzard"
+		]
+	},
+	"simplesort-desc": "Jednoduché zoraďovanie reťazca položiek podľa zadaného oddeľovača",
+	"simplesort-err": "Nerozpoznaná možnosť rozšírenia SimpleSort: „$1“"
+}
